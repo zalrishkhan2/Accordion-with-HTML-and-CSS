@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', sans-serif;
+}
+
+body {
+    background-color: rgb(13, 51, 85);
+}
+
+#list {
+    width: 600px;
+    margin: 100px auto;
+}
+
+#list li {
+    background: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    list-style: none;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#list li label {
+    padding: 10px;
+    color: rgb(177, 20, 20);
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+#list li label span {
+    transform: rotate(90deg);
+    font-size: 14px;
+    color: #333;
+}
+
+#list label + input[type="radio"] {
+    display: none;
+}
+
+#list .content {
+    padding: 0 10px;
+    overflow: hidden;
+    max-height: 0;
+    line-height: 26px;
+    transition: max-height 0.5s;
+}
+
+#list label + input[type="radio"]:checked + .content {
+    max-height: 400px;
+}
